@@ -12,22 +12,23 @@
 <body>
     <section class="content mt-8">
         <h2 class="underline text-center">AI chatbot</h2>
-        <div class="chatbox  bg-white p-6 max-w-sm mx-auto mt-3 rounded-xl grid">
+        <div class="chatbox bg-white max-h-96 p-6 max-w-sm mx-auto overflow-y-auto mt-3 rounded-xl grid">
             <h3 class="font-bold border-b-2 pb-3 mb-3">Chat</h3>
-            <div class="message-text bg-gray-200 p-3 w-fit mt-2 rounded-xl">Hello</div>
-            <div class="message-text bg-gray-200 p-3 w-fit mt-2 rounded-xl">How are you</div>
-            <div class="message-text bg-gray-200 p-3 w-fit mt-2 rounded-xl grid justify-self-end items-end">I'm good</div>
-            <div class="send-container flex items-center gap-2 mt-8 max-w-full">
+            <div class="message-text bg-gray-200 p-3 max-w-[50%] w-fit mt-2 rounded-xl">Hello</div>
+            <div class="message-text bg-gray-200 p-3 max-w-[50%] w-fit mt-2 rounded-xl">How are you fjrffr frkf rf  frkflrflrof rf </div>
+            <div class="message-text bg-gray-200 p-3 max-w-[50%] w-fit mt-2 rounded-xl justify-self-end items-end">I'm good</div>
+            <div class="send-container bg-white pt-3 sticky bottom-0 flex items-center gap-2 mt-8 max-w-full">
                 <input
                 type="text"
                 name="message"
                 placeholder="Write a message"
-                class="mesage-input flex-auto w-64 px-4 py-2 enabled:active:border-blue-400 rounded-full placeholder-shown:border-gray-800 bg-gray-100" />
-                <div class="send-button cursor-pointer">
+                class="message-input flex-auto w-64 px-4 py-2 enabled:active:border-blue-400 rounded-full placeholder-shown:border-gray-800 bg-gray-100" />
+                <div id="send" class="cursor-pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"></path></svg>
                 </div>
             </div>
         </div>
     </section>
+    <script src="./js/index.js"></script>
 </body>
 </html>
