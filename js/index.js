@@ -3,7 +3,9 @@ const sendButton = document.getElementById("send");
 const sendContainer = document.querySelector(".send-container")
 const messageInput = document.querySelector(".message-input");
 const timeStamp = document.querySelector(".timeStamp");
-
+const next = document.getElementById("next");
+const form = document.querySelector(".user-form");
+const selectElement = document.getElementById("select");
 
 
 const createUserMessage = (text) => {
@@ -14,7 +16,9 @@ const createUserMessage = (text) => {
         "p-3",
         "max-w-[50%]",
         "w-fit",
+        "h-fit",
         "mt-2",
+        "mb-2",
         "rounded-xl",
         "justify-self-end",
         "items-end"
@@ -35,7 +39,9 @@ const createBotMessage = (text) =>{
         "p-3",
         "max-w-[50%]",
         "w-fit",
+        "h-fit",
         "mt-2",
+        "mb-2",
         "rounded-xl"
     ];
 
@@ -45,6 +51,12 @@ const createBotMessage = (text) =>{
     chatbox.insertBefore(div, sendContainer);
     // messageInput.value = "";
 }
+
+
+next.addEventListener("click", function(){
+    chatbox.classList.remove("hidden");
+    form.classList.add("hidden");
+})
 
 
 sendButton.addEventListener("click", function(){
@@ -90,7 +102,8 @@ firstBotMessage()
 
 
 function getResponse(userText){
-    let botResponse = getBotResponse(userText);
+    let selectedItem = selectElement.value;
+    let botResponse = getBotResponse(userText, selectedItem);
     setTimeout(() => {
         createBotMessage(botResponse);
     }, 1000);

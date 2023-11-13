@@ -4,27 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SupportSwift</title>
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./tailwind/output.css">
     <link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>
-<body>
+<body class="bg-blue-100">
     <section class="content mt-8">
-        <h2 class="underline text-center">AI chatbot</h2>
-        <div class="chatbox bg-white max-h-96 p-6 max-w-sm mx-auto overflow-y-auto no-scrollbar mt-3 rounded-xl grid">
-            <h3 class="font-bold border-b-2 pb-3 mb-3">Chat</h3>
-            <p class="timeStamp text-center text-xs py-3"></p>
-            <!-- <div class="message-text bg-gray-200 p-3 max-w-[50%] w-fit mt-2 rounded-xl justify-self-end items-end">Hello! welcome to Upperlink Limited"</div> -->
-            <div class="send-container bg-white pt-3 sticky bottom-0 flex items-center gap-2 mt-8 max-w-full">
-                <input
-                type="text"
-                name="message"
-                placeholder="Write a message"
-                class="message-input h-auto items-center resize-none flex-auto w-64 px-3 py-3 border rounded-full no-scrollbar placeholder-shown:bg-gray-100"/>
-                <div id="send" class="cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;"><path d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"></path></svg>
+        <h2 class="underline text-center font-bold text-slate-700 text-lg mb-5">AI chatbot</h2>
+        <div class="container relative bg-white h-96 max-h-96 p-6 pb-3 mb-auto max-w-sm mx-auto mt-3 rounded-xl overflow-hidden flex flex-col">
+            <h3 class="absolute top-0 left-0 right-0 font-bold text-white border-b-2 py-4 px-6 bg-blue-500 mb-3 z-10">Chat</h3>
+            <div class="chatbox mt-10 h-full grid hidden overflow-y-auto custom-scrollbar">
+                <p class="timeStamp text-center h-fit text-xs row-auto"></p>
+                <!-- <div class="message-text bg-gray-200 p-3 max-w-[50%] w-fit h-fit mt-2 rounded-xl justify-self-end items-end">Hello! welcome to Upperlink Limited"</div> -->
+                <div class="send-container bg-white mt-7 pt-3 pb-1 sticky bottom-0 left-0 right-0 flex items-center gap-2 max-w-full">
+                    <input
+                    type="text"
+                    name="message"
+                    placeholder="Write a message"
+                    class="message-input items-center resize-none flex-auto w-64 px-3 py-3 border rounded-full no-scrollbar placeholder-shown:bg-gray-100"/>
+                    <div id="send" class="cursor-pointer">
+                        <svg class="fill-blue-500" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z"></path></svg>
+                    </div>
                 </div>
+            </div>
+
+
+        <div class="user-form mt-12">
+            <form>
+                <label class="email">
+                    <span class="block text-sm font-medium text-slate-700">Email address</span>
+                    <input 
+                    name= "email"
+                    placeholder="Enter your email"
+                    class="border-2 p-3 mt-1 text-slate-700 text-sm font-medium rounded-lg w-full border-slate-200 bg-white placeholder-slate-400"/>
+                </label>
+
+                <label>
+                    <span class="block mt-3 text-sm font-medium text-slate-700 dark:text-white">Reason</span> 
+                    <select id="select" class="mt-1 border-2 border-slate-200 text-slate-700 text-sm font-medium rounded-lg focus:ring-blue-500 placeholder-slate-400 focus:border-blue-500 block w-full p-3 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option selected>Choose an issue </option>
+                    <option>Hosting Plans</option>
+                    <option>Domain and web management</option>
+                    <option>Uptime and Reliability</option>
+                    <option>Billing and Payments</option>
+                    </select>
+                </label>
+
+
+<!--                     <label class="issue-type relative block">
+                        <span class="block text-sm font-medium text-slate-700 mt-4">What type of inquire do you have</span>
+                        <span class="absolute inset-y-0 right-0 flex items-center pt-5 pr-2">
+                            <svg class="h-5 w-5 fill-slate-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="transform: ;msFilter:;"><path d="M16.293 9.293 12 13.586 7.707 9.293l-1.414 1.414L12 16.414l5.707-5.707z"></path></svg>
+                        </span>
+                        <ul class="absolute bottom-3 px-3 bg-white w-full hidden">
+                            <li>Account</li>
+                            <li>Account</li>
+                            <li>Account</li>
+                        </ul>
+                        <input 
+                        name= "email"
+                        placeholder="Select am issue"
+                        class=" border-solid border-2 p-3 mt-1 rounded-lg w-full border-slate-200 bg-white placeholder-slate-400 contrast-more:border-slate-400 placeholder-show: slate-500"/>
+                      </label> -->
+
+                    <span 
+                    id="next"
+                    class="text-white block mt-12 py-3 w-full rounded-lg bg-blue-500 text-center cursor-pointer">
+                        Next
+                    </span>
+                  </form>                  
             </div>
         </div>
     </section>
