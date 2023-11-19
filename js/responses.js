@@ -60,6 +60,6 @@ function getBotResponse(input, group) {
   }
 
   // If no keyword is found in the specified group, return a default response
-  return "I'm not sure how to respond to that, please ask again.";
+  return "I'm not sure how to respond to that, please ask again or contact info@upperlink.com for clarifications";
 }
 
